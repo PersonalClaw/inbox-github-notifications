@@ -1,0 +1,35 @@
+{
+  "name": "inbox-github-notifications",
+  "version": "0.1.0",
+  "displayName": "Inbox Github Notifications",
+  "description": "A PersonalClaw inbox provider.",
+  "icon": "Blocks",
+  "license": "MIT",
+  "tags": [
+    "inbox"
+  ],
+  "cli": {
+    "setup": "app_cli:setup",
+    "doctor": "app_cli:doctor"
+  },
+  "loggerRoots": [
+    "inbox_github_notifications"
+  ],
+  "provider": {
+    "type": "inbox",
+    "implementation": "provider:create_provider",
+    "settingsSchema": {
+      "type": "object",
+      "properties": {
+        "timeout_secs": {
+          "type": "integer",
+          "default": 20,
+          "x-meta": {
+            "label": "Request timeout",
+            "help": "Seconds this provider waits before giving up."
+          }
+        }
+      }
+    }
+  }
+}
