@@ -21,12 +21,35 @@
     "settingsSchema": {
       "type": "object",
       "properties": {
+        "token": {
+          "type": "string",
+          "default": "",
+          "x-meta": {
+            "label": "GitHub Token",
+            "help": "A GitHub personal access token. Required for private repos and to raise the unauthenticated rate limit. Leave empty to poll anonymously.",
+            "sensitive": true
+          }
+        },
+        "api_base": {
+          "type": "string",
+          "default": "https://api.github.com",
+          "x-meta": {
+            "label": "GitHub API Base",
+            "help": "Override for GitHub Enterprise. Defaults to the public API.",
+            "tags": [
+              "advanced"
+            ]
+          }
+        },
         "timeout_secs": {
           "type": "integer",
           "default": 20,
           "x-meta": {
-            "label": "Request timeout",
-            "help": "Seconds this provider waits before giving up."
+            "label": "Request Timeout",
+            "help": "Maximum seconds to wait for a GitHub API response.",
+            "tags": [
+              "advanced"
+            ]
           }
         }
       }
