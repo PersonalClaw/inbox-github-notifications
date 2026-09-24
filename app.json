@@ -1,8 +1,8 @@
 {
   "name": "inbox-github-notifications",
   "version": "0.1.0",
-  "displayName": "Inbox Github Notifications",
-  "description": "A PersonalClaw inbox provider.",
+  "displayName": "GitHub Notifications Inbox",
+  "description": "Surface your GitHub notifications as PersonalClaw inbox items: review requests, mentions, CI failures, and issue activity. Read-only, stdlib-only, and it filters server-side so history never floods in.",
   "icon": "Blocks",
   "license": "MIT",
   "tags": [
